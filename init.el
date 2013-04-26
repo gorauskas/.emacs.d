@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-26 16:26 by jgg
+;; Modified: 2013-04-26 16:37 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -198,3 +198,7 @@
 (set-face-attribute 'mode-line nil
                     :family "Ubuntu Mono"
                     :height 90)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Function definitions from elsewhere
+(require 'jgg-defun)
