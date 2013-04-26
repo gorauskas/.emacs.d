@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-26 16:25 by jgg
+;; Modified: 2013-04-26 16:26 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -185,3 +185,16 @@
 (set-face-attribute 'default nil
                     :family "Droid Sans Mono"
                     :height 100)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Modeline
+(setq column-number-mode t
+      line-number-mode t
+      size-indication-mode t
+      display-time-format " %Y-%m-%d %R ")
+
+(display-time-mode t)
+(which-function-mode t)
+
+(set-face-attribute 'mode-line nil
+                    :family "Ubuntu Mono"
+                    :height 90)
