@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-26 16:18 by jgg
+;; Modified: 2013-04-26 16:24 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -146,3 +146,20 @@
 
 ;; Treat clipboard input as UTF-8 string first; compound text next, etc.
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Ido Mode Everywhere
+(ido-mode t)
+(ido-everywhere t)
+
+(setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
+
+(eval-after-load 'ido
+  '(setq
+    ido-max-prospects 16
+    ido-enable-prefix nil
+    ido-enable-flex-matching t
+    ido-create-new-buffer 'always
+    ido-use-filename-at-point nil
+    ido-case-fold t
+    ido-use-virtual-buffers nil))
