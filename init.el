@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-26 16:24 by jgg
+;; Modified: 2013-04-26 16:25 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -163,3 +163,25 @@
     ido-use-filename-at-point nil
     ido-case-fold t
     ido-use-virtual-buffers nil))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Frame Dimensions & Look
+(if (eq system-type 'windows-nt)
+    (setq default-frame-alist
+          '((top . 10) (left . 80)
+            (width . 224) (height . 56)
+            (cursor-type . box)))
+  (setq default-frame-alist
+        '((top . 80) (left . 10)
+          (width . 224) (height . 56)
+          (cursor-type . box))))
+
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+
+;;(load-theme 'darkburn t)
+(load-theme 'charcoal-black t)
+
+(set-face-attribute 'default nil
+                    :family "Droid Sans Mono"
+                    :height 100)
