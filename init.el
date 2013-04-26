@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-26 16:44 by jgg
+;; Modified: 2013-04-26 16:45 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -203,7 +203,24 @@
 ;; Function definitions from elsewhere
 (require 'jgg-defun)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Hooks
+(add-hook 'emacs-lisp-mode-hook 'use-lambda-symbol)
+(add-hook 'lisp-mode-hook 'use-lambda-symbol)
+(add-hook 'lisp-interaction-mode-hook 'use-lambda-symbol)
+(add-hook 'scheme-mode-hook 'use-lambda-symbol)
 
+;; in elisp the - char should not be considered a word boundary
+(add-hook 'emacs-lisp-mode-hook '(lambda () (modify-syntax-entry ?- "w")))
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook 'remove-elc-on-save)
+
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
+(add-hook 'before-save-hook 'copyright-update)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'before-save-hook 'time-stamp)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Binding definition from elsewhere
