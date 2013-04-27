@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2013-04-27 00:20 by jgg
+;; modified: 2013-04-27 01:19 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -35,6 +35,7 @@
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c w") 'count-words)
 (global-set-key (kbd "C-c W") 'word-count)
+(global-set-key (kbd "C-c i") 'imenu)
 
 (global-set-key (kbd "<f9>") 'whitespace-mode)
 (global-set-key (kbd "<f10>") 'linum-mode)

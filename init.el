@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-27 00:38 by jgg
+;; Modified: 2013-04-27 01:10 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -21,6 +21,7 @@
 ;; requirements
 (require 'cl)
 (require 'eldoc)
+(require 'ffap)
 (require 'ibuffer)
 (require 'ido)
 (require 'imenu)
