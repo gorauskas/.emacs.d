@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-27 01:10 by jgg
+;; Modified: 2013-04-27 11:56 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -27,6 +27,7 @@
 (require 'imenu)
 (require 'org)
 (require 'paredit)
+(require 'rainbow-mode)
 (require 'recentf)
 (require 'saveplace)
 (require 'server)
@@ -40,7 +41,6 @@
 (require 'yasnippet)
 
 (require 'ido-ubiquitous)
-;;(require 'ido-vertical-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; behavior
@@ -50,7 +50,6 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (auto-compression-mode t)
-(recentf-mode t)
 (show-paren-mode t)
 (yas-global-mode 1)
 (global-hl-line-mode t)
@@ -133,6 +132,7 @@
 
 (add-to-list 'recentf-filename-handlers 'abbreviate-file-name)
 (add-to-list 'auto-mode-alist '("~/.emacs.d/thirdparty/yasnippet/snippets/.*" . snippet-mode))
+(recentf-mode t)     ;; this must happen after the recentf-save-file value is set
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Unicode enabled everywhere
@@ -171,7 +171,6 @@
     ido-use-virtual-buffers nil))
 
 (ido-ubiquitous-mode t)
-;;(ido-vertical-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Frame Dimensions & Look
@@ -189,14 +188,13 @@
 (tool-bar-mode -1)
 
 (load-theme 'darkburn t)
-;;(load-theme 'charcoal-black t)
-;;(load-theme 'late-night t)
 
 (windsize-default-keybindings)
 
 (set-face-attribute 'default nil
                     :family "Droid Sans Mono"
                     :height 100)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Modeline
 (setq column-number-mode t

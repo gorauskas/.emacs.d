@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2013-04-26 16:34 by jgg
+;; modified: 2013-04-27 10:08 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -108,6 +108,10 @@
   (interactive)
   (if (not (eq system-type 'windows-nt))
       (shell-command "uuidgen" t)))
+
+(defun transparency (value)
+  (interactive "nTransparency Value [0 - 100]: ")
+  (set-frame-parameter (selected-frame) 'alpha value))
 
 (provide 'jgg-defun)
 ;; eof
