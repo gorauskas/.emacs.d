@@ -16,3 +16,4 @@ url
 .recentf
 .smex-items
 tramp
+*.db.gz
