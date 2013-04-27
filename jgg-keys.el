@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2013-04-26 16:43 by jgg
+;; modified: 2013-04-26 17:01 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -18,7 +18,7 @@
 ;; Bindings Definitions
 
 ;; registers
-(set-register ?i '(file . "~/.emacs"))
+(set-register ?i '(file . "~/.emacs.d/init.el"))
 (set-register ?t '(file . "~/Dropbox/temp.txt"))
 
 (global-set-key (kbd "C-x C-r")
