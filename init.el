@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-26 16:47 by jgg
+;; Modified: 2013-04-26 23:43 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -35,6 +35,9 @@
 (require 'windmove)
 (require 'winner)
 (require 'yasnippet)
+
+(require 'ido-ubiquitous)
+(require 'ido-vertical-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; behavior
@@ -150,8 +153,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ido Mode Everywhere
 (ido-mode t)
-(ido-everywhere t)
-
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 (eval-after-load 'ido
@@ -163,6 +164,9 @@
     ido-use-filename-at-point nil
     ido-case-fold t
     ido-use-virtual-buffers nil))
+
+(ido-ubiquitous-mode t)
+(ido-vertical-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Frame Dimensions & Look
@@ -179,8 +183,9 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
-;;(load-theme 'darkburn t)
-(load-theme 'charcoal-black t)
+(load-theme 'darkburn t)
+;;(load-theme 'charcoal-black t)
+;;(load-theme 'late-night t)
 
 (set-face-attribute 'default nil
                     :family "Droid Sans Mono"
