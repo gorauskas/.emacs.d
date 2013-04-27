@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-26 23:43 by jgg
+;; Modified: 2013-04-27 00:38 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -30,14 +30,16 @@
 (require 'saveplace)
 (require 'server)
 (require 'smex)
+(require 'sr-speedbar)
 (require 'thingatpt)
 (require 'uniquify)
 (require 'windmove)
+(require 'windsize)
 (require 'winner)
 (require 'yasnippet)
 
 (require 'ido-ubiquitous)
-(require 'ido-vertical-mode)
+;;(require 'ido-vertical-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; behavior
@@ -112,6 +114,8 @@
       show-paren-style 'mixed
       smex-history-length 10
       smex-save-file "~/.emacs.d/.smex-items"
+      speedbar-directory-unshown-regexp "^$"
+      speedbar-show-unknown-files t
       tab-always-indent 'complete
       time-stamp-pattern "10/[Mm]odified: %:y-%02m-%02d %02H:%02M by %u$"
       truncate-partial-width-windows nil
@@ -166,7 +170,7 @@
     ido-use-virtual-buffers nil))
 
 (ido-ubiquitous-mode t)
-(ido-vertical-mode)
+;;(ido-vertical-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Frame Dimensions & Look
@@ -186,6 +190,8 @@
 (load-theme 'darkburn t)
 ;;(load-theme 'charcoal-black t)
 ;;(load-theme 'late-night t)
+
+(windsize-default-keybindings)
 
 (set-face-attribute 'default nil
                     :family "Droid Sans Mono"
