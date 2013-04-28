@@ -15,5 +15,6 @@ url
 .ido.last
 .recentf
 .smex-items
+.layout
 tramp
 *.db.gz

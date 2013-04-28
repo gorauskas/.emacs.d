@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2013-04-27 10:08 by jgg
+;; modified: 2013-04-27 15:56 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -112,6 +112,13 @@
 (defun transparency (value)
   (interactive "nTransparency Value [0 - 100]: ")
   (set-frame-parameter (selected-frame) 'alpha value))
+
+(defun toggle-fullscreen ()
+  "Toggle fullscreen mode for the current frame. When on the selected frame
+will consume the entire display area"
+  (interactive)
+  (let ((f (selected-frame)))
+    (modify-frame-parameters f `((fullscreen . ,(if (eq nil (frame-parameter f 'fullscreen)) 'fullboth nil))))))
 
 (provide 'jgg-defun)
 ;; eof
