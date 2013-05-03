@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2013-04-27 15:56 by jgg
+;; modified: 2013-05-02 19:07 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -119,6 +119,47 @@ will consume the entire display area"
   (interactive)
   (let ((f (selected-frame)))
     (modify-frame-parameters f `((fullscreen . ,(if (eq nil (frame-parameter f 'fullscreen)) 'fullboth nil))))))
+
+(defun jgg/zoom-in ()
+  "Increase font size on the fly"
+  (interactive)
+  (set-face-attribute 'default nil :height
+                      (ceiling (* 1.10
+                                  (face-attribute 'default :height)))))
+
+(defun jgg/zoom-out ()
+  "Decrease the font size on the fly"
+  (interactive)
+  (set-face-attribute 'default nil :height
+                      (floor (* 0.9
+                                (face-attribute 'default :height)))))
+
+(defun reload-init ()
+  (interactive)
+  (if (bufferp (get-file-buffer "init.el"))
+      (save-buffer (get-buffer "init.el")))
+  (load-file "~/.emacs.d/init.el")
+  (message "Init file reloaded successfully"))
+
+(defun ask-before-quit ()
+  "I have the tendency to hit C-x C-c at the most innoportune times"
+  (interactive)
+  (y-or-n-p "Do you really want to quit Emacs?"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Slick Copy - When there is no active region then copy the current line
+(defadvice kill-ring-save (before slick-copy activate compile)
+  (interactive
+   (if mark-active (list (region-beginning) (region-end))
+     (message "Copied Line")
+     (list (line-beginning-position)
+           (line-beginning-position 2)))))
+
+(defadvice kill-region (before slick-cut activate compile)
+  (interactive
+   (if mark-active (list (region-beginning) (region-end))
+     (list (line-beginning-position)
+           (line-beginning-position 2)))))
 
 (provide 'jgg-defun)
 ;; eof

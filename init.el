@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-04-30 02:55 by jgg
+;; Modified: 2013-05-02 19:35 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -72,6 +72,7 @@
       color-theme-is-global t
       completion-ignore-case t
       default-directory "~/"
+      delete-old-versions t                          ;; prevent the 'Delete excess backup versions ... ' message
       delete-selection-mode t
       echo-keystrokes 0.1
       ediff-diff-options "-w"
@@ -214,6 +215,12 @@
 (require 'jgg-defun)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Enable rectangular selections using CUA mode
+(setq cua-enable-cua-keys nil)     ;; Don't emulate windows keys like C-z for undo
+(cua-mode t)
+(cua-selection-mode nil)           ;; Don't use Shift + Arrow for marking
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Hooks
 (add-hook 'emacs-lisp-mode-hook 'use-lambda-symbol)
 (add-hook 'lisp-mode-hook 'use-lambda-symbol)
@@ -231,6 +238,8 @@
 (add-hook 'before-save-hook 'copyright-update)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'before-save-hook 'time-stamp)
+
+(add-hook 'kill-emacs-query-functions 'ask-before-quit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Binding definition from elsewhere
