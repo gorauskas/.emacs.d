@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2013-05-02 17:05 by jgg
+;; modified: 2013-05-04 15:17 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -54,6 +54,8 @@
 (global-set-key (kbd "C-z f") 'find-file-at-point)
 (global-set-key (kbd "C-z +") 'jgg/zoom-in)
 (global-set-key (kbd "C-z -") 'jgg/zoom-out)
+(global-set-key (kbd "C-z o") 'jgg/open-line-below)
+(global-set-key (kbd "C-z O") 'jgg/open-line-above)
 
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<f9>") 'whitespace-mode)

@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2013-05-02 19:07 by jgg
+;; modified: 2013-05-04 15:14 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -145,6 +145,28 @@ will consume the entire display area"
   "I have the tendency to hit C-x C-c at the most innoportune times"
   (interactive)
   (y-or-n-p "Do you really want to quit Emacs?"))
+
+(defun jgg/open-line-below ()
+  "Insert a new line below the current line and put the point at beggining.
+The regular elisp open-line function bound to C-o is fine for most uses
+but sometimes I want the newline to open below the current line without
+splitting."
+  (interactive)
+  (unless (eolp)
+    (end-of-line))
+  (newline-and-indent))
+
+(defun jgg/open-line-above ()
+  "Insert a new line above the current line and put the point at beggining.
+The regular elisp open-line function bound to C-o is fine for most uses
+but sometimes I want the newline to open above the current line without
+splitting."
+  (interactive)
+  (unless (bolp)
+    (beginning-of-line))
+  (newline)
+  (forward-line -1)
+  (indent-according-to-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Slick Copy - When there is no active region then copy the current line
