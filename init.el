@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-05-07 22:24 by jgg
+;; Modified: 2013-05-09 00:37 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -199,6 +199,11 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Modeline
+(require 'powerline)
+(setq powerline-default-separator 'arrow
+      powerline-height 16)
+(powerline-default-theme)
+
 (setq column-number-mode t
       line-number-mode t
       size-indication-mode t
