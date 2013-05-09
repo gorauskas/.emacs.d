@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2013-05-04 15:17 by jgg
+;; modified: 2013-05-09 01:36 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -61,6 +61,7 @@
 (global-set-key (kbd "<f9>") 'whitespace-mode)
 (global-set-key (kbd "<S-f9>") 'rainbow-mode)
 (global-set-key (kbd "<f10>") 'linum-mode)
+(global-set-key (kbd "<S-f10>") 'toggle-highlight-indentation-mode)
 (global-set-key (kbd "<f11>") 'ruler-mode)
 (global-set-key (kbd "<f12>") 'sr-speedbar-toggle)
 (global-set-key (kbd "<S-f12>") 'toggle-fullscreen)

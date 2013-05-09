@@ -1,5 +1,5 @@
 ;; This file is part of emacs init for Jonas Gorauskas
-;; modified: 2013-05-04 05:09 by jgg
+;; modified: 2013-05-09 01:33 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -19,6 +19,19 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; highlight indentation
+(require 'highlight-indentation)
+
+(defun toggle-highlight-indentation-mode ()
+  (interactive)
+  (highlight-indentation-mode)
+  (highlight-indentation-current-column-mode))
+
+(set-face-background 'highlight-indentation-face "#333333")
+(set-face-background 'highlight-indentation-current-column-face "#222222")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (provide 'jgg-code)
 
