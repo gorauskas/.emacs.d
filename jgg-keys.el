@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2013-05-09 01:36 by jgg
+;; modified: 2013-05-30 10:41 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -42,27 +42,38 @@
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
 
-(global-set-key (kbd "C-z k") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-z n") 'cleanup-buffer)
-(global-set-key (kbd "C-z r") 'revert-buffer)
-(global-set-key (kbd "C-z C-k s") 'prep-list-items-for-sql)
-(global-set-key (kbd "C-z u") 'unfill-paragraph)
+;; buffer or region actions
+(global-set-key (kbd "C-z C-c d") 'insert-datetime)
+(global-set-key (kbd "C-z C-c k") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-z C-c n") 'cleanup-buffer)
+(global-set-key (kbd "C-z C-c o") 'jgg/open-line-below)
+(global-set-key (kbd "C-z C-c O") 'jgg/open-line-above)
+(global-set-key (kbd "C-z C-c r") 'revert-buffer)
+(global-set-key (kbd "C-z C-c s") 'insert-signature)
+(global-set-key (kbd "C-z C-c u") 'unfill-paragraph)
+(global-set-key (kbd "C-z C-c U") 'untabify-buffer)
+(global-set-key (kbd "C-z C-c w") 'count-words)
+(global-set-key (kbd "C-z C-c W") 'word-count)
+
+;; Other actions
 (global-set-key (kbd "C-z y") 'bury-buffer)
-(global-set-key (kbd "C-z w") 'count-words)
-(global-set-key (kbd "C-z W") 'word-count)
-(global-set-key (kbd "C-z i") 'imenu)
 (global-set-key (kbd "C-z f") 'find-file-at-point)
+(global-set-key (kbd "C-z C-f") 'sudo-edit)   ;;doesn't work on windows
 (global-set-key (kbd "C-z +") 'jgg/zoom-in)
 (global-set-key (kbd "C-z -") 'jgg/zoom-out)
-(global-set-key (kbd "C-z o") 'jgg/open-line-below)
-(global-set-key (kbd "C-z O") 'jgg/open-line-above)
 
+;; Keyboard macro actions
+(global-set-key (kbd "C-z C-k s") 'prep-list-items-for-sql)
+
+;; mode specific shortcuts
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
+(global-set-key (kbd "<S-f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<f9>") 'whitespace-mode)
 (global-set-key (kbd "<S-f9>") 'rainbow-mode)
 (global-set-key (kbd "<f10>") 'linum-mode)
-(global-set-key (kbd "<S-f10>") 'toggle-highlight-indentation-mode)
+(global-set-key (kbd "<S-f10>") 'linum-mode)
 (global-set-key (kbd "<f11>") 'ruler-mode)
+(global-set-key (kbd "<S-f11>") 'ruler-mode)
 (global-set-key (kbd "<f12>") 'sr-speedbar-toggle)
 (global-set-key (kbd "<S-f12>") 'toggle-fullscreen)
 

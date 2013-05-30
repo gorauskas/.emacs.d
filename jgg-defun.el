@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2013-05-04 15:14 by jgg
+;; modified: 2013-05-29 15:17 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -105,6 +105,7 @@
     (uniquify-all-lines-buffer)))
 
 (defun insert-uuid ()
+  "wont work on windows"
   (interactive)
   (if (not (eq system-type 'windows-nt))
       (shell-command "uuidgen" t)))
