@@ -36,7 +36,7 @@
 
  `(cursor                              ((t ( :background "#f8f8f2" ))))
  `(default                             ((t ( :background "#252620" :foreground "#CEDBE7" ))))
- `(mode-line                           ((t ( :background "#292923"                       :height 125 ))))
+ `(mode-line                           ((t ( :background "#292923" :foreground "#ABCBD7" :height 125 ))))
  `(linum                               ((t (                       :foreground "#3E4D4A" ))))
  `(trailing-whitespace                 ((t (                       :foreground "#3B3A32" ))))
  `(highlight                           ((t ( :background "#333333" ))))
