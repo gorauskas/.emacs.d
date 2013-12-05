@@ -1,21 +1,32 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2013-04-27 20:25 by jgg
+;; modified: 2013-12-05 00:59 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
 (message "JGG: Loading session save support...")
 
-(require 'revive)
-(setq revive:configuration-file "~/.emacs.d/.layout")
+;; Save sessions
+(require 'desktop)
+(desktop-save-mode 1)
+(setq desktop-enable t)
+(setq desktop-path '("~/.emacs.d")
+      desktop-dirname "~/.emacs.d"
+      desktop-base-file-name ".emacs-desktop"
+      use-file-dialog nil)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Key Bindings
-(global-set-key (kbd "<C-S-f12>") 'save-current-configuration)
-(global-set-key (kbd "<C-S-f11>") 'resume)
+;; Save the cursor position within files
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file "~/.emacs.d/.emacs-places")
+
+;; Save windows and frames within sessions
+(require 'revive+)
+(setq revive-plus:all-frames t)
+(revive-plus:minimal-setup)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Hooks
-(add-hook 'kill-emacs-hook 'save-current-configuration)
+(add-hook 'auto-save-hook #'(lambda () (call-interactively #'desktop-save)))
 
 (provide 'jgg-session)
 

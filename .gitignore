@@ -18,3 +18,7 @@ url
 .layout
 tramp
 *.db.gz
+.emacs-desktop
+.emacs.desktop.lock
+last-wconf
+wconf-archive
