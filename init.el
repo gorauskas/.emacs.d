@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-12-05 00:45 by jgg
+;; Modified: 2013-12-02 21:01 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -29,6 +29,7 @@
 (require 'paredit)
 (require 'rainbow-mode)
 (require 'recentf)
+(require 'saveplace)
 (require 'server)
 (require 'smex)
 (require 'sr-speedbar)
@@ -63,6 +64,7 @@
               indicate-buffer-boundaries 'left
               indicate-empty-lines t
               major-mode 'text-mode
+              save-place t
               truncate-lines t
               version-control t)
 
@@ -103,6 +105,7 @@
       recentf-save-file "~/.emacs.d/.recentf"
       recentf-max-saved-items 100
       require-final-newline t
+      save-place-file "~/.emacs.d/.emacs-places"
       scroll-margin 0
       scroll-conservately 100000
       scroll-up-aggressively 0
@@ -172,15 +175,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Frame Dimensions & Look
+;; provide a sane size on windows and maximize otherwise
 (if (eq system-type 'windows-nt)
     (setq default-frame-alist
           '((top . 10) (left . 80)
             (width . 224) (height . 56)
             (cursor-type . box)))
-  (setq default-frame-alist
-        '((top . 80) (left . 10)
-          (width . 224) (height . 56)
-          (cursor-type . box))))
+  (set-frame-parameter nil 'fullscreen 'maximized))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
