@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2013-12-05 00:59 by jgg
+;; modified: 2013-12-05 02:02 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -7,12 +7,15 @@
 
 ;; Save sessions
 (require 'desktop)
-(desktop-save-mode 1)
 (setq desktop-enable t)
-(setq desktop-path '("~/.emacs.d")
-      desktop-dirname "~/.emacs.d"
+(setq desktop-dirname "~/.emacs.d/"
       desktop-base-file-name ".emacs-desktop"
-      use-file-dialog nil)
+      desktop-path (list desktop-dirname)
+      desktop-base-lock-name ".emacs-desktop.lock"
+      desktop-save t
+      desktop-files-not-to-save "^$"
+      desktop-load-locked-desktop nil)
+(desktop-save-mode 1)
 
 ;; Save the cursor position within files
 (require 'saveplace)
@@ -23,10 +26,6 @@
 (require 'revive+)
 (setq revive-plus:all-frames t)
 (revive-plus:minimal-setup)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Hooks
-(add-hook 'auto-save-hook #'(lambda () (call-interactively #'desktop-save)))
 
 (provide 'jgg-session)
 
