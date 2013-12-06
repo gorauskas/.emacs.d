@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2013-05-30 10:41 by jgg
+;; modified: 2013-12-06 01:54 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -66,6 +66,10 @@
 (global-set-key (kbd "C-z C-k s") 'prep-list-items-for-sql)
 
 ;; mode specific shortcuts
+(global-set-key (kbd "<f6>") 'toggle-menu-bar-mode-from-frame)
+(global-set-key (kbd "<S-f6>") 'toggle-tool-bar-mode-from-frame)
+(global-set-key (kbd "<f7>") 'toggle-scroll-bar)
+(global-set-key (kbd "<S-f7>") 'toggle-scroll-bar)
 (global-set-key (kbd "<f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<S-f8>") 'toggle-truncate-lines)
 (global-set-key (kbd "<f9>") 'whitespace-mode)

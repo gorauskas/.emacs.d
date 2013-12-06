@@ -19,6 +19,6 @@ url
 tramp
 *.db.gz
 .emacs-desktop
-.emacs.desktop.lock
+.emacs-desktop.lock
 last-wconf
 wconf-archive
