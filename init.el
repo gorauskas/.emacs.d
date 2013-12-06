@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2013-12-06 01:22 by jgg
+;; Modified: 2013-12-06 02:43 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2013 by Jonas Gorauskas
@@ -53,6 +53,7 @@
 (yas-global-mode 1)
 (global-hl-line-mode t)
 (winner-mode t)
+(mouse-avoidance-mode 'cat-and-mouse)
 
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
@@ -66,7 +67,8 @@
               truncate-lines t
               version-control t)
 
-(setq backup-directory-alist '((".*" . "~/.emacs.d/backup/"))
+(setq apropos-do-all t
+      backup-directory-alist '((".*" . "~/.emacs.d/backup/"))
       color-theme-is-global t
       completion-ignore-case t
       default-directory "~/"
@@ -95,7 +97,8 @@
       inhibit-startup-screen t
       initial-scratch-message ";; Happy Hacking!\n\n"
       make-backup-files t
-      mouse-avoidance-mode 'proteus
+      make-pointer-invisible nil
+      mouse-yank-at-point t
       query-replace-highlight t
       read-file-name-completion-ignore-case t
       recentf-auto-cleanup 'never
@@ -103,6 +106,7 @@
       recentf-save-file "~/.emacs.d/.recentf"
       recentf-max-saved-items 100
       require-final-newline t
+      save-interprogram-paste-before-kill t
       scroll-margin 0
       scroll-conservately 100000
       scroll-up-aggressively 0
@@ -124,6 +128,7 @@
       visible-bell t
       winner-dont-bind-my-keys t
       x-select-enable-clipboard t
+      x-select-enable-primary t
       yas-prompt-functions '(yas-x-prompt yas-ido-prompt)
       yas-snippet-dirs '("~/.emacs.d/thirdparty/yasnippet/snippets")
       yas-wrap-around-region t)

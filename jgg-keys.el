@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2013-12-06 01:54 by jgg
+;; modified: 2013-12-06 02:11 by jgg
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -23,6 +23,12 @@
 
 ;; Open a recently visited file
 (global-set-key (kbd "C-x C-r") 'recentf-ido-find-file)
+
+;; swapped with regex-aware incremental search functions.
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
 
 ;; Try to expand the current symbol based on recently used symbols and buffers
 (global-set-key (kbd "M-/") 'hippie-expand)
