@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-01-19 13:30 by jgg
+;; Modified: 2014-01-28 16:40 by jonasg211
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -182,12 +182,9 @@
 ;; Frame Dimensions & Look
 
 ;; provide a sane size on windows and maximize otherwise
-(if (eq system-type 'windows-nt)
-    (setq default-frame-alist
-          '((top . 10) (left . 80)
-            (width . 224) (height . 56)
-            (cursor-type . box)))
-  (set-frame-parameter nil 'fullscreen 'maximized))
+;; (if (eq system-type 'windows-nt)
+;;     (w32-send-sys-command 61488)
+;;   (set-frame-parameter nil 'fullscreen 'maximized))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
