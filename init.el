@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-01-28 16:40 by jonasg211
+;; Modified: 2014-01-31 14:02 by jonasg211
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -94,7 +94,7 @@
                                          try-expand-line
                                          try-complete-lisp-symbol-partially
                                          try-complete-lisp-symbol)
-      history-length 4096
+      history-length 100
       history-delete-duplicates t
       inhibit-startup-screen t
       initial-scratch-message ";; Happy Hacking!\n\n"
@@ -117,7 +117,7 @@
       scroll-preserve-screen-position t
       search-highlight t
       show-paren-style 'mixed
-      smex-history-length 4096
+      smex-history-length 16
       smex-save-file "~/.emacs.d/.smex-items"
       speedbar-directory-unshown-regexp "^$"
       speedbar-show-unknown-files t
