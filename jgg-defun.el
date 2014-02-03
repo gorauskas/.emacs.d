@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2013-05-29 15:17 by jgg
+;; modified: 2014-02-02 12:48:26
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -32,7 +32,7 @@
 (defun insert-signature ()
   "Insert the authors signature"
   (interactive)
-  (insert "Jonas Gorauskas [JGG]"))
+  (insert "Jonas Gorauskas"))
 
 (defun word-count ()
   "Count words in region or buffer"

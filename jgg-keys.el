@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-01-16 16:59 by jonasg211
+;; modified: 2014-01-16 16:59:00
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 

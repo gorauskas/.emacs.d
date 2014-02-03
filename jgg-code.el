@@ -6,6 +6,20 @@
 (message "JGG: Loading programming support...")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Hooks
+(add-hook 'emacs-lisp-mode-hook 'use-lambda-symbol)
+(add-hook 'lisp-mode-hook 'use-lambda-symbol)
+(add-hook 'lisp-interaction-mode-hook 'use-lambda-symbol)
+(add-hook 'scheme-mode-hook 'use-lambda-symbol)
+
+;; in elisp the - char should not be considered a word boundary
+(add-hook 'emacs-lisp-mode-hook '(lambda () (modify-syntax-entry ?- "w")))
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook 'remove-elc-on-save)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Markdown
 (require 'markdown-mode)
 
