@@ -190,7 +190,8 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(load-theme 'darkburn t)
+(load-theme 'solarized-dark t)
+;; (load-theme 'darkburn t)
 ;; (load-theme 'anti-zenburn t)
 
 (windsize-default-keybindings)
