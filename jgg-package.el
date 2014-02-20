@@ -1,11 +1,60 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-02-19 21:38:44
+;; modified: 2014-02-20 01:15:09
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
 (message "JGG: Loading packages...")
 
+(require 'cl)
+(require 'eldoc)
+(require 'ffap)
+(require 'ibuffer)
+(require 'ido)
+(require 'imenu)
+(require 'org)
+(require 'recentf)
+(require 'server)
+(require 'speedbar)
+(require 'thingatpt)
+(require 'uniquify)
+(require 'windmove)
 
+(require 'package)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(setq package-enable-at-startup nil)
+(package-initialize)
 
-(provide 'jgg-packages)
+;; a list of my favorite packages
+(defvar jgg-packages
+  '(anti-zenburn-theme
+    desktop
+    ido-ubiquitous
+    paredit
+    rainbow-mode
+    solarized-theme
+    sr-speedbar
+    windsize
+    yasnippet
+    zenburn-theme
+    smex))
+
+;; check if a package is installed
+(defun jgg-packages-installed-p ()
+  (loop for p in jgg-packages
+        when (not (package-installed-p p))
+        do (return nil)
+        finally (return t)))
+
+;; check if package in favorites list above are currently installed
+;; install if not available
+(unless (jgg-packages-installed-p)
+  (message "%s" "Emacs is now refreshing its package database...")
+  (package-refresh-contents)
+  (message "%s" " done! ")
+  (dolist (p jgg-packages)
+    (when (not (package-installed-p p))
+      (package-install p))))
+
+(provide 'jgg-package)
 ;; eof

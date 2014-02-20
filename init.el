@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-02-19 21:30:55
+;; Modified: 2014-02-20 00:46:49
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -11,35 +11,11 @@
 (setq debug-on-error t)
 (cd "~/")
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/themes")
-(add-to-list 'load-path "~/.emacs.d/thirdparty")
-(add-to-list 'load-path "~/.emacs.d/thirdparty/yasnippet")
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; requirements
-(require 'cl)
-(require 'eldoc)
-(require 'ffap)
-(require 'ibuffer)
-(require 'ido)
-(require 'imenu)
-(require 'org)
-(require 'paredit)
-(require 'rainbow-mode)
-(require 'recentf)
-(require 'server)
-(require 'smex)
-(require 'sr-speedbar)
-(require 'thingatpt)
-(require 'uniquify)
-(require 'windmove)
-(require 'windsize)
-(require 'winner)
-(require 'yasnippet)
+;; packages
 
-(require 'ido-ubiquitous)
+(require 'jgg-package)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; behavior
@@ -133,11 +109,9 @@
       x-select-enable-clipboard t
       x-select-enable-primary t
       yas-prompt-functions '(yas-x-prompt yas-ido-prompt)
-      yas-snippet-dirs '("~/.emacs.d/thirdparty/yasnippet/snippets")
       yas-wrap-around-region t)
 
 (add-to-list 'recentf-filename-handlers 'abbreviate-file-name)
-(add-to-list 'auto-mode-alist '("~/.emacs.d/thirdparty/yasnippet/snippets/.*" . snippet-mode))
 (recentf-mode t)     ;; this must happen after the recentf-save-file value is set
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -182,17 +156,17 @@
 ;; Frame Dimensions & Look
 
 ;; provide a sane size on windows and maximize otherwise
-;; (if (eq system-type 'windows-nt)
-;;     (w32-send-sys-command 61488)
-;;   (set-frame-parameter nil 'fullscreen 'maximized))
+(if (eq system-type 'windows-nt)
+    (w32-send-sys-command 61488)
+  (set-frame-parameter nil 'fullscreen 'maximized))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(load-theme 'darkburn t)
-;; (load-theme 'anti-zenburn t)
+(load-theme 'zenburn t)
 
+(require 'windsize)
 (windsize-default-keybindings)
 
 (set-face-attribute 'default nil
