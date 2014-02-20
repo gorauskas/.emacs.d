@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified:
+;; Modified: 2014-02-19 21:30:55
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -190,8 +190,7 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(load-theme 'solarized-dark t)
-;; (load-theme 'darkburn t)
+(load-theme 'darkburn t)
 ;; (load-theme 'anti-zenburn t)
 
 (windsize-default-keybindings)
