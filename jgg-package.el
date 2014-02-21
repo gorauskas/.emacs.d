@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-02-20 01:15:09
+;; modified: 2014-02-21 00:57:45
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -28,8 +28,11 @@
 ;; a list of my favorite packages
 (defvar jgg-packages
   '(anti-zenburn-theme
+    darkburn-theme
     desktop
+    highlight-indentation
     ido-ubiquitous
+    markdown-mode
     paredit
     rainbow-mode
     solarized-theme
