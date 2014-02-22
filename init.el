@@ -182,16 +182,15 @@
 ;; Frame Dimensions & Look
 
 ;; provide a sane size on windows and maximize otherwise
-;; (if (eq system-type 'windows-nt)
-;;     (w32-send-sys-command 61488)
-;;   (set-frame-parameter nil 'fullscreen 'maximized))
+(if (eq system-type 'windows-nt)
+    (w32-send-sys-command 61488)
+  (set-frame-parameter nil 'fullscreen 'maximized))
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(load-theme 'darkburn t)
-;; (load-theme 'anti-zenburn t)
+(load-theme 'charcoal-black t)
 
 (windsize-default-keybindings)
 
