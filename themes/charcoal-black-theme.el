@@ -1,7 +1,7 @@
 ;;; charcoal-black-theme --- charcoal black theme for GNU Emacs 24
 ;; Author: Jonas Gorauskas
 ;; Created: 2013-04-26 00:57:22
-;; Modified: 2013-04-26 01:28 by jgg
+;; Modified: 2014-02-23 04:28:45
 ;; Version: 0.1
 ;;
 ;; Ported to GNU Emacs 24 from the original Charcoal Black theme
