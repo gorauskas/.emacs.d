@@ -11,11 +11,6 @@
 (setq debug-on-error t)
 (cd "~/")
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/themes")
-(add-to-list 'load-path "~/.emacs.d/thirdparty")
-(add-to-list 'load-path "~/.emacs.d/thirdparty/yasnippet")
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; packages
@@ -114,11 +109,9 @@
       x-select-enable-clipboard t
       x-select-enable-primary t
       yas-prompt-functions '(yas-x-prompt yas-ido-prompt)
-      yas-snippet-dirs '("~/.emacs.d/thirdparty/yasnippet/snippets")
       yas-wrap-around-region t)
 
 (add-to-list 'recentf-filename-handlers 'abbreviate-file-name)
-(add-to-list 'auto-mode-alist '("~/.emacs.d/thirdparty/yasnippet/snippets/.*" . snippet-mode))
 (recentf-mode t)     ;; this must happen after the recentf-save-file value is set
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
