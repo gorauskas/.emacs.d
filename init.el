@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified:
+;; Modified: 2014-03-03 00:10:15
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -18,28 +18,9 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; requirements
-(require 'cl)
-(require 'eldoc)
-(require 'ffap)
-(require 'ibuffer)
-(require 'ido)
-(require 'imenu)
-(require 'org)
-(require 'paredit)
-(require 'rainbow-mode)
-(require 'recentf)
-(require 'server)
-(require 'smex)
-(require 'sr-speedbar)
-(require 'thingatpt)
-(require 'uniquify)
-(require 'windmove)
-(require 'windsize)
-(require 'winner)
-(require 'yasnippet)
+;; packages
 
-(require 'ido-ubiquitous)
+(require 'jgg-package)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; behavior
@@ -190,8 +171,9 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(load-theme 'charcoal-black t)
+(load-theme 'darkburn t)
 
+(require 'windsize)
 (windsize-default-keybindings)
 
 (set-face-attribute 'default nil
