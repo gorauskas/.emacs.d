@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-01-16 16:59:00
+;; modified: 2014-03-03 00:46:01
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -38,6 +38,9 @@
 
 ;; Generic apropos is MUCH more useful than apropos-command
 (global-set-key (kbd "C-h a") 'apropos)
+
+;; Use switch-window instead of other-window
+(global-set-key (kbd "C-x o") 'switch-window)
 
 ;; use smex instead of standard M-x
 (global-set-key (kbd "M-x") 'smex)

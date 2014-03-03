@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-02-21 00:56:32
+;; Modified: 2014-03-03 00:10:15
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -184,8 +184,8 @@
 (which-function-mode t)
 
 (set-face-attribute 'mode-line nil
-                    :family "Ubuntu Mono"
-                    :height 90)
+                    :family "DejaVu Sans Mono"
+                    :height 80)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Function definitions from elsewhere
