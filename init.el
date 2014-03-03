@@ -209,8 +209,8 @@
 (which-function-mode t)
 
 (set-face-attribute 'mode-line nil
-                    :family "Ubuntu Mono"
-                    :height 90)
+                    :family "Droid Sans Mono"
+                    :height 80)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Function definitions from elsewhere
