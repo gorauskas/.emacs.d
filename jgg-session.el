@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2014-03-03 01:50:58
+;; modified: 2014-03-03 12:11:58
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -42,9 +42,13 @@
 (setq save-place-file "~/.emacs.d/.emacs-places")
 
 ;; Save windows and frames within sessions
-(require 'revive+)
-(setq revive-plus:all-frames t)
-(revive-plus:minimal-setup)
+(if (eq system-type 'windows-nt)
+    (message "JGG: In Windows - skipping revive setup")
+  (progn
+    (message "JGG: loading revive setup")
+    (require 'revive+)
+    (setq revive-plus:all-frames t)
+    (revive-plus:minimal-setup)))
 
 (provide 'jgg-session)
 

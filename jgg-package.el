@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-03-03 02:02:57
+;; modified: 2014-03-03 12:11:07
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -64,7 +64,8 @@
 
 ;; EL-GET stuff - fall-back to el-get for anything that's not available
 ;;  through melpa e.g. revive & revive-plus.
-
+;; TODO: Needs work to make it work on windows - Proxy
+;;       Can't reach github & emacs wiki from Intuit
 ;; So the idea is that you copy/paste this code into your *scratch* buffer,
 ;; hit C-x C-e, and you have a working el-get.
 ;; (url-retrieve
@@ -72,22 +73,25 @@
 ;;  (lambda (s)
 ;;    (goto-char (point-max))
 ;;    (eval-print-last-sexp)))
+(if (eq system-type 'windows-nt)
+    (message "JGG: Windows - skipping EL-GET setup")
+  (progn
+    (message "JGG: loading EL-GET setup")
+    (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+    ;; install it if not already
+    (unless (require 'el-get nil 'noerror)
+      (with-current-buffer
+          (url-retrieve-synchronously
+           "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+        (goto-char (point-max))
+        (eval-print-last-sexp)))
 
-;; install it if not already
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+    (setq el-get-sources
+          '(el-get
+            revive-plus)) ;; el-get will handle revive and revive+
 
-(setq el-get-sources
-      '(el-get
-        revive-plus))    ;; el-get will handle revive and revive+
-
-(el-get 'sync)
+    (el-get 'sync)))
 
 (provide 'jgg-package)
 ;; eof
