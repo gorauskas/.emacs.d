@@ -1,10 +1,12 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-03-03 00:10:15
+;; Modified: 2014-03-07 15:25:03
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
 
 (message "JGG: This is EMACS INIT")
+
+(debug)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; path stuff
@@ -121,7 +123,7 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
-
+(set-clipboard-coding-system 'utf-8)
 (setq locale-coding-system 'utf-8)
 
 (if (boundp 'buffer-file-coding-system)
@@ -153,41 +155,6 @@
 (ido-ubiquitous-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Frame Dimensions & Look
-
-;; provide a sane size on windows and maximize otherwise
-(if (eq system-type 'windows-nt)
-    (w32-send-sys-command 61488)
-  (set-frame-parameter nil 'fullscreen 'maximized))
-
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-
-(load-theme 'darkburn t)
-
-(require 'windsize)
-(windsize-default-keybindings)
-
-(set-face-attribute 'default nil
-                    :family "DejaVu Sans Mono"
-                    :height 100)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Modeline
-(setq column-number-mode t
-      line-number-mode t
-      size-indication-mode t
-      display-time-format " %Y-%m-%d %R ")
-
-(display-time-mode t)
-(which-function-mode t)
-
-(set-face-attribute 'mode-line nil
-                    :family "Droid Sans Mono"
-                    :height 80)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Function definitions from elsewhere
 (require 'jgg-defun)
 
@@ -216,6 +183,39 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Coding setup from elsewhere
 (require 'jgg-code)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Frame Dimensions & Look
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+(load-theme 'darkburn t)
+
+(require 'windsize)
+(windsize-default-keybindings)
+
+;; provide a sane size on windows and maximize otherwise
+(if (eq system-type 'gnu/linux)
+    (set-frame-parameter nil 'fullscreen 'maximized))
+
+(set-face-attribute 'default nil
+                    :family "DejaVu Sans Mono"
+                    :height 100)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Modeline
+(setq column-number-mode t
+      line-number-mode t
+      size-indication-mode t
+      display-time-format " %Y-%m-%d %R ")
+
+(display-time-mode t)
+(which-function-mode t)
+
+(set-face-attribute 'mode-line nil
+                    :family "Droid Sans Mono"
+                    :height 80)
 
 (message "JGG: EMACS INIT Done Loading...")
 
