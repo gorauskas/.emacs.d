@@ -1,5 +1,5 @@
 ;; This file is part of emacs init for Jonas Gorauskas
-;; modified: 2013-05-09 01:33 by jgg
+;; modified: 2014-03-08 15:42:15
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -23,7 +23,7 @@
 ;; Markdown
 (require 'markdown-mode)
 
-(setq markdown-command "markdown_py -x extra"
+(setq markdown-command "python /usr/local/bin/markdown_py -x extra"
       markdown-css-path "notes.css"
       markdown-coding-system 'utf-8
       markdown-content-type "text/html")

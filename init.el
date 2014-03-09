@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-03-07 23:40:57
+;; Modified: 2014-03-08 16:39:33
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -192,6 +192,7 @@
 
 (load-theme 'darkburn t)
 
+;; Easily resize windows within a frame
 (require 'windsize)
 (windsize-default-keybindings)
 
