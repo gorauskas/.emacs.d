@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2014-03-07 23:23:06
+;; modified: 2014-03-10 15:35:03
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -114,10 +114,12 @@
   (interactive "nTransparency Value [0 - 100]: ")
   (set-frame-parameter (selected-frame) 'alpha value))
 
-(defun w32-maximize-frame ()
-  "Maximize the current frame (windows only)"
+(defun jgg/maximize-frame ()
+  "Maximize the current frame (linux & windows)"
   (interactive)
-  (w32-send-sys-command 61488))
+  (if (eq system-type 'windows-nt)
+      (w32-send-sys-command 61488)
+    (set-frame-parameter nil 'fullscreen 'maximized)))
 
 (defun toggle-fullscreen ()
   "Toggle fullscreen mode for the current frame. When on the selected frame

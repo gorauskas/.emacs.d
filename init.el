@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-03-09 00:34:08
+;; Modified: 2014-03-10 15:35:54
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -196,9 +196,7 @@
 (require 'windsize)
 (windsize-default-keybindings)
 
-(if (eq system-type 'windows-nt)
-    (add-hook 'window-setup-hook 'w32-maximize-frame t)
-  (set-frame-parameter nil 'fullscreen 'maximized))
+(add-hook 'window-setup-hook 'jgg/maximize-frame t)
 
 (set-face-attribute 'default nil
                     :family "DejaVu Sans Mono"
