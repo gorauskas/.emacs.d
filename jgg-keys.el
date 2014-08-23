@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-03-03 00:46:01
+;; modified: 2014-04-17 11:08:03
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -51,7 +51,7 @@
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-x C-z"))
 
-;; buffer or region actions
+;; buffer or region actionsf
 (global-set-key (kbd "C-z C-c d") 'insert-datetime)
 (global-set-key (kbd "C-z C-c k") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-z C-c n") 'cleanup-buffer)
@@ -70,6 +70,7 @@
 (global-set-key (kbd "C-z C-f") 'sudo-edit)   ;;doesn't work on windows
 (global-set-key (kbd "C-z +") 'jgg/zoom-in)
 (global-set-key (kbd "C-z -") 'jgg/zoom-out)
+(global-set-key (kbd "C-z w") 'other-frame)   ;; C-x 5 o is a little too cumbersome to me
 
 ;; Keyboard macro actions
 (global-set-key (kbd "C-z C-k s") 'prep-list-items-for-sql)
