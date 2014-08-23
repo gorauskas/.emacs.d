@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2014-03-10 15:35:03
+;; modified: 2014-08-23 02:08:37
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -67,6 +67,14 @@
   (if (or arg (not buffer-file-name))
       (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+
+(defun browse-current-file ()
+  "Open the current file as a URL using `browse-url`."
+  (interactive)
+  (let ((file-name (buffer-file-name)))
+    (if (tramp-tramp-file-p file-name)
+        (error "Cannot open tramp file")
+      (browse-url (concat "file://" file-name)))))
 
 (defun pairing-bot ()
   "If you can't program with a human, use this instead..."
