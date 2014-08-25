@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-04-17 11:08:03
+;; modified: 2014-08-24 20:32:25
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -18,7 +18,7 @@
 ;; Bindings Definitions
 
 ;; registers
-(set-register ?i '(file . "~/.emacs.d/init.el"))
+(set-register ?i '(file . (concat user-emacs-directory "init.el")))
 (set-register ?t '(file . "~/Dropbox/temp.txt"))
 
 ;; Open a recently visited file
