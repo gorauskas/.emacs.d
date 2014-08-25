@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-08-24 20:22:02
+;; Modified: 2014-08-24 21:41:47
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -42,6 +42,7 @@
               indicate-buffer-boundaries 'left
               indicate-empty-lines t
               major-mode 'text-mode
+              tab-width 4
               truncate-lines t
               version-control t)
 

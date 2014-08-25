@@ -1,5 +1,5 @@
 ;; This file is part of emacs init for Jonas Gorauskas
-;; modified: 2014-03-31 00:12:52
+;; modified: 2014-08-24 21:45:29
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -17,6 +17,14 @@
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'remove-elc-on-save)
+
+;; file modes that are not obvious
+(add-to-list 'auto-mode-alist '(".bashrc" . shell-script-mode))
+(add-to-list 'auto-mode-alist '(".bash_alias" . shell-script-mode))
+(add-to-list 'auto-mode-alist '(".bash_function" . shell-script-mode))
+(add-to-list 'auto-mode-alist '(".bash_logout" . shell-script-mode))
+(add-to-list 'auto-mode-alist '(".bash_profile" . shell-script-mode))
+(add-to-list 'auto-mode-alist '(".bash_prompt" . shell-script-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; python coding with elpy
