@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-03-14 05:34:34
+;; Modified: 2014-08-24 17:08:03
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -106,6 +106,8 @@
       uniquify-separator ":"
       uniquify-strip-common-suffix t  ;strip common buffer suffixes
       uniquify-after-kill-buffer-p t  ;re-uniquify buffer names after killing one
+      user-full-name "Jonas Gorauskas"
+      user-mail-address "jonas@gorauskas.com"
       visible-bell t
       winner-dont-bind-my-keys t
       x-select-enable-clipboard t
@@ -124,6 +126,7 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (set-clipboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
 (setq locale-coding-system 'utf-8)
 
 (if (boundp 'buffer-file-coding-system)
