@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2014-08-24 20:28:20
+;; modified: 2014-08-26 13:16:55
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -8,7 +8,7 @@
 ;; Save sessions
 (require 'desktop)
 (setq desktop-enable t)
-(setq desktop-dirname user-emacs-directory
+(setq desktop-dirname "~/.emacs.d/"
       desktop-base-file-name ".emacs-desktop"
       desktop-path (list desktop-dirname)
       desktop-base-lock-name ".emacs-desktop.lock"
@@ -39,7 +39,7 @@
 ;; Save the cursor position within files
 (require 'saveplace)
 (setq-default save-place t)
-(setq save-place-file (concat user-emacs-directory ".emacs-places"))
+(setq save-place-file "~/.emacs.d/.emacs-places")
 
 ;; Save windows and frames within sessions
 (if (eq system-type 'windows-nt)

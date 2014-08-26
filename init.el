@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-08-24 22:13:52
+;; Modified: 2014-08-26 13:09:49
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -12,7 +12,7 @@
 ;; path stuff
 (setq debug-on-error t)
 (cd "~/")
-(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path "~/.emacs.d")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; packages
@@ -47,8 +47,8 @@
               version-control t)
 
 (setq apropos-do-all t
-      backup-directory-alist '((".*" . (concat user-emacs-directory "backup")))
-      bookmark-default-file (concat user-emacs-directory "bookmarks")
+      backup-directory-alist '((".*" . "~/.emacs.d/backup"))
+      bookmark-default-file "~/.emacs.d/bookmarks"
       color-theme-is-global t
       completion-ignore-case t
       default-directory "~/"
@@ -85,7 +85,7 @@
       read-file-name-completion-ignore-case t
       recentf-auto-cleanup 'never
       recentf-exclude '("[/\\]\\.elpa/" "[/\\]\\.ido\\.last\\'" "[/\\]\\.git/" ".*\\.gz\\'" ".*-autoloads\\.el\\'" "[/\\]archive-contents\\'" "[/\\]\\.loaddefs\\.el\\'" "url/cookies")
-      recentf-save-file (concat user-emacs-directory ".recentf")
+      recentf-save-file "~/.emacs.d/.recentf"
       recentf-save-file-coding-system "utf-8"
       recentf-max-saved-items 30
       require-final-newline t
@@ -99,7 +99,7 @@
       search-highlight t
       show-paren-style 'mixed
       smex-history-length 16
-      smex-save-file (concat user-emacs-directory ".smex-items")
+      smex-save-file "~/.emacs.d/.smex-items"
       speedbar-directory-unshown-regexp "^$"
       speedbar-show-unknown-files t
       tab-always-indent 'complete
@@ -146,7 +146,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Ido Mode Everywhere
 (ido-mode t)
-(setq ido-save-directory-list-file (concat user-emacs-directory ".ido.last"))
+(setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 (eval-after-load 'ido
   '(setq

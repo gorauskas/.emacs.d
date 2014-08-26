@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-08-24 20:31:22
+;; modified: 2014-08-26 13:15:11
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -78,7 +78,7 @@
     (message "JGG: Windows - skipping EL-GET setup")
   (progn
     (message "JGG: loading EL-GET setup")
-    (add-to-list 'load-path (concat user-emacs-directory "el-get/el-get"))
+    (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
     ;; install it if not already
     (unless (require 'el-get nil 'noerror)

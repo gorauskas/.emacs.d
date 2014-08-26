@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2014-08-24 20:26:05
+;; modified: 2014-08-26 13:12:47
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -154,7 +154,7 @@ will consume the entire display area"
   (interactive)
   (if (bufferp (get-file-buffer "init.el"))
       (save-buffer (get-buffer "init.el")))
-  (load-file (concat user-emacs-directory "init.el"))
+  (load-file "~/.emacs.d/init.el")
   (message "Init file reloaded successfully"))
 
 (defun ask-before-quit ()
