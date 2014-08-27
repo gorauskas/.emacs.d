@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-08-26 13:15:11
+;; modified: 2014-08-26 19:29:42
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -74,25 +74,25 @@
 ;;  (lambda (s)
 ;;    (goto-char (point-max))
 ;;    (eval-print-last-sexp)))
-(if (eq system-type 'windows-nt)
-    (message "JGG: Windows - skipping EL-GET setup")
-  (progn
-    (message "JGG: loading EL-GET setup")
-    (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+;; (if (eq system-type 'windows-nt)
+;;     (message "JGG: Windows - skipping EL-GET setup")
+;;   (progn
+;;     (message "JGG: loading EL-GET setup")
+;;     (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-    ;; install it if not already
-    (unless (require 'el-get nil 'noerror)
-      (with-current-buffer
-          (url-retrieve-synchronously
-           "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-        (goto-char (point-max))
-        (eval-print-last-sexp)))
+;;     ;; install it if not already
+;;     (unless (require 'el-get nil 'noerror)
+;;       (with-current-buffer
+;;           (url-retrieve-synchronously
+;;            "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+;;         (goto-char (point-max))
+;;         (eval-print-last-sexp)))
 
-    (setq el-get-sources
-          '(el-get
-            revive-plus)) ;; el-get will handle revive and revive+
+;;     (setq el-get-sources
+;;           '(el-get
+;;             revive-plus)) ;; el-get will handle revive and revive+
 
-    (el-get 'sync)))
+;;     (el-get 'sync)))
 
 (provide 'jgg-package)
 ;; eof
