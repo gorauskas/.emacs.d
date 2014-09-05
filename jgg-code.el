@@ -1,5 +1,5 @@
 ;; This file is part of emacs init for Jonas Gorauskas
-;; modified: 2014-09-04 18:13:57
+;; modified: 2014-09-04 18:21:06
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -28,7 +28,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; python coding with elpy, but not on windows
-(if (not (system-type 'windows-nt))
+(if (not (eq system-type 'windows-nt))
     (progn
       (elpy-enable)
       (elpy-use-ipython)
