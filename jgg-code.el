@@ -1,5 +1,5 @@
 ;; This file is part of emacs init for Jonas Gorauskas
-;; modified: 2014-08-24 21:45:29
+;; modified: 2014-09-04 18:13:57
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -27,10 +27,12 @@
 (add-to-list 'auto-mode-alist '(".bash_prompt" . shell-script-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; python coding with elpy
-(elpy-enable)
-(elpy-use-ipython)
-(setq elpy-rpc-backend "jedi")
+;; python coding with elpy, but not on windows
+(if (not (system-type 'windows-nt))
+    (progn
+      (elpy-enable)
+      (elpy-use-ipython)
+      (setq elpy-rpc-backend "jedi")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Markdown
