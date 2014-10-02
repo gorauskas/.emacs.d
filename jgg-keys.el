@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-08-26 13:13:51
+;; modified: 2014-10-01 21:51:41
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -67,10 +67,11 @@
 ;; Other actions
 (global-set-key (kbd "C-z y") 'bury-buffer)
 (global-set-key (kbd "C-z f") 'find-file-at-point)
-(global-set-key (kbd "C-z C-f") 'sudo-edit)   ;;doesn't work on windows
+(global-set-key (kbd "C-z C-f") 'sudo-edit)        ;;doesn't work on windows
 (global-set-key (kbd "C-z +") 'jgg/zoom-in)
 (global-set-key (kbd "C-z -") 'jgg/zoom-out)
-(global-set-key (kbd "C-z w") 'other-frame)   ;; C-x 5 o is a little too cumbersome to me
+(global-set-key (kbd "C-z w") 'other-frame)        ;; C-x 5 o is a little too cumbersome to me
+(global-set-key (kbd "C-z r") 'rotate-windows)
 
 ;; Keyboard macro actions
 (global-set-key (kbd "C-z C-k s") 'prep-list-items-for-sql)
