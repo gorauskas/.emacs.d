@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-08-26 13:09:49
+;; Modified: 2014-11-02 13:52:19
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -12,7 +12,7 @@
 ;; path stuff
 (setq debug-on-error t)
 (cd "~/")
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; packages
@@ -93,8 +93,8 @@
       savehist-mode t
       scroll-margin 0
       scroll-conservately 100000
-      scroll-up-aggressively 0
-      scroll-down-aggressively 0
+      ;scroll-up-aggressively 0
+      ;scroll-down-aggressively 0
       scroll-preserve-screen-position t
       search-highlight t
       show-paren-style 'mixed
