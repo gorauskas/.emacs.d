@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-12-05 14:23:24
+;; modified: 2014-12-05 19:12:54
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -32,6 +32,7 @@
   '(anti-zenburn-theme
     darkburn-theme
     desktop
+    elfeed
     elpy
     highlight-indentation
     ido-ubiquitous

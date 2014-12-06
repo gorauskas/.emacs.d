@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-10-27 15:30:17
+;; modified: 2014-12-05 20:21:10
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -64,6 +64,9 @@
 (global-set-key (kbd "C-z C-c U") 'untabify-buffer)
 (global-set-key (kbd "C-z C-c w") 'count-words)
 (global-set-key (kbd "C-z C-c W") 'word-count)
+
+;; read feeds
+(global-set-key (kbd "C-z C-c f") 'elfeed)
 
 ;; Other actions
 (global-set-key (kbd "C-z y") 'bury-buffer)
