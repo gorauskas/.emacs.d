@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-12-06 15:23:41
+;; modified: 2014-12-07 02:07:36
 ;; htt://jonas.gorauskas.com/
 ;; http://thestandardoutput.com/
 
@@ -19,6 +19,7 @@
       elfeed-feeds '(("http://thestandardoutput.com/rss.xml" home)
                      ("http://feeds.feedburner.com/DilbertDailyStrip" comics)
                      ("http://xkcd.com/rss.xml" comics)
+                     ("http://what-if.xkcd.com/feed.atom" comics funny)
                      ("http://www.randsinrepose.com/index.xml" startups)
                      ("http://feeds.feedburner.com/SoftwareByRob" startups)
                      ("http://feeds.feedburner.com/miketaber" startups)
@@ -42,7 +43,13 @@
                      ("http://esr.ibiblio.org/?feed=rss2" programming esr)
                      ("http://steve.grc.com/feed/" technology)
                      ("https://www.schneier.com/blog/atom.xml" security)
-                     ("http://krebsonsecurity.com/feed/" security)))
+                     ("http://krebsonsecurity.com/feed/" security)
+                     ("http://irreal.org/blog/?feed=rss2" programming lisp scheme emacs)
+                     ("http://sachachua.com/blog/feed/" emacs)
+                     ("http://blog.ioactive.com/feeds/posts/default" security)
+                     ("http://emacsredux.com/atom.xml" emacs)
+                     ("http://batsov.com/atom.xml" emacs clojure lisp)
+                     ("https://projecteuler.net/rss2_euler.xml" programming puzzles)))
 
 (provide 'jgg-feeds)
 ;; eof
