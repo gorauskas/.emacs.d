@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-12-05 19:12:54
+;; modified: 2014-12-06 17:24:29
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -43,6 +43,7 @@
     solarized-theme
     sr-speedbar
     switch-window
+    twittering-mode
     windsize
     yasnippet
     zenburn-theme))

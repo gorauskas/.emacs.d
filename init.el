@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-12-05 20:21:02
+;; Modified: 2014-12-06 19:07:15
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2014 by Jonas Gorauskas
@@ -105,6 +105,13 @@
       tab-always-indent 'complete
       time-stamp-pattern "10/[Mm]odified:\\\\?[ ]+%:y-%02m-%02d %02H:%02M:%02S\$"
       truncate-partial-width-windows nil
+      twittering-icon-mode t
+      twittering-icon-storage-file "~/.emacs.d/.twittering-mode-icons.gz"
+      twittering-private-info-file "~/.emacs.d/.twittering-mode.gpg"
+      twittering-status-format "%FOLD{%RT{%FACE[bold]{RT by %S %s} @ %C{%Y-%m-%d %H:%M:%S} %@}\n%i %S %s >> %r@ %C{%Y-%m-%d %H:%M:%S} %@{}\n%FOLD[    ]{%T}\n\n%FOLD[  ]{from %l, using %f}}\n\n"
+      twittering-timer-interval 60
+      twittering-use-icon-storage t
+      twittering-use-master-password t
       uniquify-buffer-name-style 'post-forward
       uniquify-separator ":"
       uniquify-strip-common-suffix t  ;strip common buffer suffixes
