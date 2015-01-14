@@ -1,8 +1,8 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2014-12-06 19:07:15
+;; Modified: 2015-01-13 19:41:40
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
-;; Copyright 1997-2014 by Jonas Gorauskas
+;; Copyright 1997-2015 by Jonas Gorauskas
 
 (message "JGG: This is EMACS INIT")
 
@@ -230,6 +230,10 @@
 (which-function-mode t)
 
 (set-face-attribute 'mode-line nil
+                    :family "DejaVu Sans Mono"
+                    :height 75)
+
+(set-face-attribute 'mode-line-inactive nil
                     :family "DejaVu Sans Mono"
                     :height 75)
 

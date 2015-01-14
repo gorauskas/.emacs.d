@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-12-06 17:24:29
+;; modified: 2014-12-13 16:58:22
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -45,6 +45,7 @@
     switch-window
     twittering-mode
     windsize
+    yaml-mode
     yasnippet
     zenburn-theme))
 
