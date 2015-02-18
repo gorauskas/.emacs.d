@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2015-01-13 19:41:40
+;; Modified: 2015-02-17 23:25:21
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2015 by Jonas Gorauskas
@@ -216,8 +216,8 @@
 (add-hook 'window-setup-hook 'jgg/maximize-frame t)
 
 (set-face-attribute 'default nil
-                    :family "DejaVu Sans Mono"
-                    :height 90)
+                    :family "Envy Code R"
+                    :height 98)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Modeline
@@ -230,12 +230,12 @@
 (which-function-mode t)
 
 (set-face-attribute 'mode-line nil
-                    :family "DejaVu Sans Mono"
-                    :height 75)
+                    :family "Share Tech Mono"
+                    :height 90)
 
 (set-face-attribute 'mode-line-inactive nil
-                    :family "DejaVu Sans Mono"
-                    :height 75)
+                    :family "Share Tech Mono"
+                    :height 90)
 
 (message "JGG: EMACS INIT Done Loading...")
 
