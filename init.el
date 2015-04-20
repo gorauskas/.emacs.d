@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2015-02-17 23:25:21
+;; Modified: 2015-04-20 14:49:43
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2015 by Jonas Gorauskas
@@ -87,6 +87,7 @@
       recentf-exclude '("[/\\]\\.elpa/" "[/\\]\\.ido\\.last\\'" "[/\\]\\.git/" ".*\\.gz\\'" ".*-autoloads\\.el\\'" "[/\\]archive-contents\\'" "[/\\]\\.loaddefs\\.el\\'" "url/cookies")
       recentf-save-file "~/.emacs.d/.recentf"
       recentf-save-file-coding-system "utf-8"
+      recentf-max-menu-items 20
       recentf-max-saved-items 30
       require-final-newline t
       save-interprogram-paste-before-kill t

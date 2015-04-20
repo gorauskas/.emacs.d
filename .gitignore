@@ -26,3 +26,4 @@ wconf-archive
 .elfeed
 .twittering-mode-icons.gz
 .twittering-mode.gpg
+session.*
