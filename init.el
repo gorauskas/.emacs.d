@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2015-04-20 14:49:43
+;; Modified: 2015-04-23 21:14:23
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2015 by Jonas Gorauskas
@@ -32,6 +32,7 @@
 (global-hl-line-mode t)
 (winner-mode t)
 (mouse-avoidance-mode 'cat-and-mouse)
+(bash-completion-setup)
 
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
