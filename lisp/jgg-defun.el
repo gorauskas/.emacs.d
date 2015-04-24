@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2015-04-23 19:07:18
+;; modified: 2015-04-23 19:49:08
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -214,8 +214,8 @@ splitting."
     (shell (current-buffer))
     (sleep-for 0 200)
     (delete-region (point-min) (point-max))
-    (commint-simple-send (get-buffer-process (current-buffer))
-                         (concat "export PS1=\"\033[33m" name "\033[0m:\033[35m\\W\033[0m>\""))))
+    (comint-simple-send (get-buffer-process (current-buffer))
+                         (concat "export PS1=\"\033[33m" name "\033[0m:\033[35m\\W\033[0m> \""))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Slick Copy - When there is no active region then copy the current line
