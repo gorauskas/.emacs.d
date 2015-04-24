@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2015-04-23 18:50:48
+;; modified: 2015-04-23 18:56:04
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -61,7 +61,7 @@
 (global-set-key (kbd "C-z C-c r") 'revert-buffer)
 (global-set-key (kbd "C-z C-c R") 'reload-init)
 (global-set-key (kbd "C-z C-c s") 'insert-signature)
-(global-set-key (kbd "C-z C-c u") 'unfill-paragraph)
+(global-set-key (kbd "C-z C-c u") 'insert-uuid)
 (global-set-key (kbd "C-z C-c U") 'untabify-buffer)
 (global-set-key (kbd "C-z C-c w") 'count-words)
 (global-set-key (kbd "C-z C-c W") 'word-count)
@@ -77,6 +77,7 @@
 (global-set-key (kbd "C-z -") 'jgg/zoom-out)
 (global-set-key (kbd "C-z w") 'other-frame)        ;; C-x 5 o is a little too cumbersome to me
 (global-set-key (kbd "C-z r") 'rotate-windows)
+(global-set-key (kbd "C-z u") 'unfill-paragraph)
 
 ;; Keyboard macro actions
 (global-set-key (kbd "C-z C-k s") 'prep-list-items-for-sql)
