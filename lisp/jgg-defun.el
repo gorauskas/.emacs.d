@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2014-10-01 21:50:14
+;; modified: 2015-04-23 18:41:20
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -190,9 +190,9 @@ The regular elisp open-line function bound to C-o is fine for most uses
 but sometimes I want the newline to open below the current line without
 splitting."
   (interactive)
-  (unless (eolp)
-    (end-of-line))
-  (newline-and-indent))
+  (move-end-of-line 1)
+  (open-line 1)
+  (next-line))
 
 (defun jgg/open-line-above ()
   "Insert a new line above the current line and put the point at beggining.
@@ -200,11 +200,9 @@ The regular elisp open-line function bound to C-o is fine for most uses
 but sometimes I want the newline to open above the current line without
 splitting."
   (interactive)
-  (unless (bolp)
-    (beginning-of-line))
-  (newline)
-  (forward-line -1)
-  (indent-according-to-mode))
+  (move-end-of-line 0)
+  (open-line 1)
+  (next-line))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Slick Copy - When there is no active region then copy the current line
