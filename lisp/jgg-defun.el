@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2015-04-23 18:41:20
+;; modified: 2015-04-23 18:50:47
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -173,6 +173,7 @@ will consume the entire display area"
                                 (face-attribute 'default :height)))))
 
 (defun reload-init ()
+  "Reloads the emacs configuration"
   (interactive)
   (if (bufferp (get-file-buffer "init.el"))
       (save-buffer (get-buffer "init.el")))

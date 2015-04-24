@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2014-12-05 20:21:10
+;; modified: 2015-04-23 18:50:48
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -59,6 +59,7 @@
 (global-set-key (kbd "C-z C-c o") 'jgg/open-line-below)
 (global-set-key (kbd "C-z C-c O") 'jgg/open-line-above)
 (global-set-key (kbd "C-z C-c r") 'revert-buffer)
+(global-set-key (kbd "C-z C-c R") 'reload-init)
 (global-set-key (kbd "C-z C-c s") 'insert-signature)
 (global-set-key (kbd "C-z C-c u") 'unfill-paragraph)
 (global-set-key (kbd "C-z C-c U") 'untabify-buffer)
