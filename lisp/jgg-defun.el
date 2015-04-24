@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2015-04-23 18:50:47
+;; modified: 2015-04-23 19:07:18
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -204,6 +204,18 @@ splitting."
   (move-end-of-line 0)
   (open-line 1)
   (next-line))
+
+(defun jgg/new-shell (name)
+  "Opens a new shell buffer with the given name in stars (*name*)
+  in the current directory and changes the prompt to `name >`."
+  (interactive "sName: ")
+  (pop-to-buffer (concat "*" name "*"))
+  (unless (eq major-mode 'shell-mode)
+    (shell (current-buffer))
+    (sleep-for 0 200)
+    (delete-region (point-min) (point-max))
+    (commint-simple-send (get-buffer-process (current-buffer))
+                         (concat "export PS1=\"\033[33m" name "\033[0m:\033[35m\\W\033[0m>\""))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Slick Copy - When there is no active region then copy the current line

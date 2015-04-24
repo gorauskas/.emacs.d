@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2015-04-23 18:56:04
+;; modified: 2015-04-23 19:07:43
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -77,6 +77,7 @@
 (global-set-key (kbd "C-z -") 'jgg/zoom-out)
 (global-set-key (kbd "C-z w") 'other-frame)        ;; C-x 5 o is a little too cumbersome to me
 (global-set-key (kbd "C-z r") 'rotate-windows)
+(global-set-key (kbd "C-z s") 'jgg/new-shell)
 (global-set-key (kbd "C-z u") 'unfill-paragraph)
 
 ;; Keyboard macro actions
