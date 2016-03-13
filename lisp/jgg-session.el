@@ -1,5 +1,5 @@
 ;; This file is part of the emacs init for Jonas Gorauskas
-;; modified: 2014-08-26 19:28:27
+;; modified: 2016-03-13 14:56:58
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -12,6 +12,7 @@
       desktop-base-file-name ".emacs-desktop"
       desktop-path (list desktop-dirname)
       desktop-base-lock-name ".emacs-desktop.lock"
+      desktop-restore-in-current-display t
       desktop-save t
       desktop-files-not-to-save "^$"
       desktop-load-locked-desktop nil)
