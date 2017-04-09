@@ -1,5 +1,5 @@
 ;; This file is part of emacs init for Jonas Gorauskas
-;; modified: 2014-09-04 18:21:06
+;; modified: 2017-04-09 14:34:32
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -33,6 +33,12 @@
       (elpy-enable)
       (elpy-use-ipython)
       (setq elpy-rpc-backend "jedi")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; C style
+(setq c-default-style "k&r"
+      c-basic-offset 4)
+(c-set-offset 'case-label '+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Markdown
