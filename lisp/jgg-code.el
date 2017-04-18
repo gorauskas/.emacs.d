@@ -1,5 +1,5 @@
 ;; This file is part of emacs init for Jonas Gorauskas
-;; modified: 2017-04-09 14:34:32
+;; modified: 2017-04-18 18:12:07
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -31,7 +31,7 @@
 (if (not (eq system-type 'windows-nt))
     (progn
       (elpy-enable)
-      (elpy-use-ipython)
+      (elpy-use-ipython "/usr/local/bin/ipython")
       (setq elpy-rpc-backend "jedi")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
