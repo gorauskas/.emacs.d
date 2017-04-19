@@ -1,8 +1,10 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2016-03-13 14:58:28
+;; Modified: 2017-04-18 16:54:03
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
-;; Copyright 1997-2016 by Jonas Gorauskas
+;; Copyright 1997-2017 by Jonas Gorauskas
+
+;(package-initialize)
 
 (message "JGG: This is EMACS INIT")
 
