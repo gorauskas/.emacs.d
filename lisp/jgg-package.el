@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2015-04-23 21:11:38
+;; modified: 2017-04-22 14:51:43
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -31,7 +31,6 @@
 (defvar jgg-packages
   '(anti-zenburn-theme
     bash-completion
-    darkburn-theme
     desktop
     elfeed
     elpy
