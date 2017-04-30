@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2017-04-22 14:42:28
+;; Modified: 2017-04-29 19:20:50
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2017 by Jonas Gorauskas
@@ -39,7 +39,7 @@
   (windmove-default-keybindings))
 
 (setq-default case-fold-search nil
-              fill-column 80
+              fill-column 79
               indent-tabs-mode nil
               indicate-buffer-boundaries 'left
               indicate-empty-lines t
