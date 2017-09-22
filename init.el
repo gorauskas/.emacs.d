@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2017-04-29 19:20:50
+;; Modified: 2017-09-21 19:32:34
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2017 by Jonas Gorauskas
@@ -210,9 +210,7 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(defvar zenburn-override-colors-alist
-  '(("zenburn-bg" . "#111111")))
-(load-theme 'zenburn t)
+(load-theme 'charcoal-black t)
 
 ;; Easily resize windows within a frame
 (require 'windsize)
