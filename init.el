@@ -1,5 +1,5 @@
 ;; GNU Emacs init for Jonas Gorauskas
-;; Modified: 2017-09-21 19:32:34
+;; Modified: 2017-09-22 17:30:34
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 ;; Copyright 1997-2017 by Jonas Gorauskas
@@ -53,6 +53,7 @@
       bookmark-default-file "~/.emacs.d/bookmarks"
       color-theme-is-global t
       completion-ignore-case t
+      custom-file "~/.emacs.d/custom.el"
       default-directory "~/"
       delete-old-versions t                          ;; prevent the 'Delete excess backup versions ... ' message
       delete-selection-mode t
