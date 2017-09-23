@@ -5,6 +5,7 @@ ac-comphist.dat
 auto-save-list
 autosaves
 backup
+custom.el
 elpa
 el-get
 eshell
