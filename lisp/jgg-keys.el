@@ -1,5 +1,5 @@
 ;; part of emacs init for Jonas Gorauskas
-;; modified: 2015-04-23 19:07:43
+;; modified: 2017-10-08 20:58:09
 ;; http://jonas.gorauskas.com/
 ;; http://www.thestandardoutput.com/
 
@@ -19,8 +19,7 @@
 
 ;; registers
 (set-register ?i '(file . "~/.emacs.d/init.el"))
-(set-register ?t '(file . "~/Dropbox/temp.txt"))
-(set-register ?n '(file . "~/Dropbox/notes.md"))
+(set-register ?n '(file . "~/Dropbox/notes.org"))
 
 ;; Open a recently visited file
 (global-set-key (kbd "C-x C-r") 'recentf-ido-find-file)
